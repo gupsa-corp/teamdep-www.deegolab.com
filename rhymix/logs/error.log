@@ -168,3 +168,139 @@
 2025/11/10 07:25:46 [notice] 7#7: start worker process 34
 2025/11/10 07:25:46 [notice] 7#7: start worker process 35
 2025/11/10 07:25:46 [notice] 7#7: start worker process 36
+2025/11/10 07:31:59 [notice] 6#6: using the "epoll" event method
+2025/11/10 07:31:59 [notice] 6#6: nginx/1.25.4
+2025/11/10 07:31:59 [notice] 6#6: built by gcc 12.2.0 (Debian 12.2.0-14) 
+2025/11/10 07:31:59 [notice] 6#6: OS: Linux 6.11.11-linuxkit
+2025/11/10 07:31:59 [notice] 6#6: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2025/11/10 07:31:59 [notice] 6#6: start worker processes
+2025/11/10 07:31:59 [notice] 6#6: start worker process 8
+2025/11/10 07:31:59 [notice] 6#6: start worker process 9
+2025/11/10 07:31:59 [notice] 6#6: start worker process 10
+2025/11/10 07:31:59 [notice] 6#6: start worker process 11
+2025/11/10 07:31:59 [notice] 6#6: start worker process 12
+2025/11/10 07:31:59 [notice] 6#6: start worker process 13
+2025/11/10 07:31:59 [notice] 6#6: start worker process 14
+2025/11/10 07:31:59 [notice] 6#6: start worker process 15
+2025/11/10 07:31:59 [notice] 6#6: start worker process 16
+2025/11/10 07:31:59 [notice] 6#6: start worker process 17
+2025/11/10 07:31:59 [notice] 6#6: start worker process 18
+2025/11/10 07:31:59 [notice] 6#6: start worker process 19
+2025/11/10 07:31:59 [notice] 6#6: start worker process 20
+2025/11/10 07:31:59 [notice] 6#6: start worker process 21
+2025/11/10 07:31:59 [notice] 6#6: start worker process 22
+2025/11/10 07:31:59 [notice] 6#6: start worker process 23
+2025/11/10 07:31:59 [notice] 6#6: start worker process 24
+2025/11/10 07:31:59 [notice] 6#6: start worker process 25
+2025/11/10 07:31:59 [notice] 6#6: start worker process 26
+2025/11/10 07:31:59 [notice] 6#6: start worker process 27
+2025/11/10 07:31:59 [notice] 6#6: start worker process 28
+2025/11/10 07:31:59 [notice] 6#6: start worker process 29
+2025/11/10 07:31:59 [notice] 6#6: start worker process 30
+2025/11/10 07:31:59 [notice] 6#6: start worker process 31
+2025/11/10 07:31:59 [notice] 6#6: start worker process 32
+2025/11/10 07:31:59 [notice] 6#6: start worker process 33
+2025/11/10 07:31:59 [notice] 6#6: start worker process 34
+2025/11/10 07:31:59 [notice] 6#6: start worker process 35
+2025/11/10 07:32:43 [notice] 7#7: using the "epoll" event method
+2025/11/10 07:32:43 [notice] 7#7: nginx/1.25.4
+2025/11/10 07:32:43 [notice] 7#7: built by gcc 12.2.0 (Debian 12.2.0-14) 
+2025/11/10 07:32:43 [notice] 7#7: OS: Linux 6.11.11-linuxkit
+2025/11/10 07:32:43 [notice] 7#7: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2025/11/10 07:32:43 [notice] 7#7: start worker processes
+2025/11/10 07:32:43 [notice] 7#7: start worker process 9
+2025/11/10 07:32:43 [notice] 7#7: start worker process 10
+2025/11/10 07:32:43 [notice] 7#7: start worker process 11
+2025/11/10 07:32:43 [notice] 7#7: start worker process 12
+2025/11/10 07:32:43 [notice] 7#7: start worker process 13
+2025/11/10 07:32:43 [notice] 7#7: start worker process 14
+2025/11/10 07:32:43 [notice] 7#7: start worker process 15
+2025/11/10 07:32:43 [notice] 7#7: start worker process 16
+2025/11/10 07:32:43 [notice] 7#7: start worker process 17
+2025/11/10 07:32:43 [notice] 7#7: start worker process 18
+2025/11/10 07:32:43 [notice] 7#7: start worker process 19
+2025/11/10 07:32:43 [notice] 7#7: start worker process 20
+2025/11/10 07:32:43 [notice] 7#7: start worker process 21
+2025/11/10 07:32:43 [notice] 7#7: start worker process 22
+2025/11/10 07:32:43 [notice] 7#7: start worker process 23
+2025/11/10 07:32:43 [notice] 7#7: start worker process 24
+2025/11/10 07:32:43 [notice] 7#7: start worker process 25
+2025/11/10 07:32:43 [notice] 7#7: start worker process 26
+2025/11/10 07:32:43 [notice] 7#7: start worker process 27
+2025/11/10 07:32:43 [notice] 7#7: start worker process 28
+2025/11/10 07:32:43 [notice] 7#7: start worker process 29
+2025/11/10 07:32:43 [notice] 7#7: start worker process 30
+2025/11/10 07:32:43 [notice] 7#7: start worker process 31
+2025/11/10 07:32:43 [notice] 7#7: start worker process 32
+2025/11/10 07:32:43 [notice] 7#7: start worker process 33
+2025/11/10 07:32:43 [notice] 7#7: start worker process 34
+2025/11/10 07:32:43 [notice] 7#7: start worker process 35
+2025/11/10 07:32:43 [notice] 7#7: start worker process 36
+2025/11/10 08:28:43 [notice] 7#7: using the "epoll" event method
+2025/11/10 08:28:43 [notice] 7#7: nginx/1.25.4
+2025/11/10 08:28:43 [notice] 7#7: built by gcc 12.2.0 (Debian 12.2.0-14) 
+2025/11/10 08:28:43 [notice] 7#7: OS: Linux 6.11.11-linuxkit
+2025/11/10 08:28:43 [notice] 7#7: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2025/11/10 08:28:43 [notice] 7#7: start worker processes
+2025/11/10 08:28:43 [notice] 7#7: start worker process 9
+2025/11/10 08:28:43 [notice] 7#7: start worker process 10
+2025/11/10 08:28:43 [notice] 7#7: start worker process 11
+2025/11/10 08:28:43 [notice] 7#7: start worker process 12
+2025/11/10 08:28:43 [notice] 7#7: start worker process 13
+2025/11/10 08:28:43 [notice] 7#7: start worker process 14
+2025/11/10 08:28:43 [notice] 7#7: start worker process 15
+2025/11/10 08:28:43 [notice] 7#7: start worker process 16
+2025/11/10 08:28:43 [notice] 7#7: start worker process 17
+2025/11/10 08:28:43 [notice] 7#7: start worker process 18
+2025/11/10 08:28:43 [notice] 7#7: start worker process 19
+2025/11/10 08:28:43 [notice] 7#7: start worker process 20
+2025/11/10 08:28:43 [notice] 7#7: start worker process 21
+2025/11/10 08:28:43 [notice] 7#7: start worker process 22
+2025/11/10 08:28:43 [notice] 7#7: start worker process 23
+2025/11/10 08:28:43 [notice] 7#7: start worker process 24
+2025/11/10 08:28:43 [notice] 7#7: start worker process 25
+2025/11/10 08:28:43 [notice] 7#7: start worker process 26
+2025/11/10 08:28:43 [notice] 7#7: start worker process 27
+2025/11/10 08:28:43 [notice] 7#7: start worker process 28
+2025/11/10 08:28:43 [notice] 7#7: start worker process 29
+2025/11/10 08:28:43 [notice] 7#7: start worker process 30
+2025/11/10 08:28:43 [notice] 7#7: start worker process 31
+2025/11/10 08:28:43 [notice] 7#7: start worker process 32
+2025/11/10 08:28:43 [notice] 7#7: start worker process 33
+2025/11/10 08:28:43 [notice] 7#7: start worker process 34
+2025/11/10 08:28:43 [notice] 7#7: start worker process 35
+2025/11/10 08:28:43 [notice] 7#7: start worker process 36
+2025/11/10 08:36:31 [notice] 7#7: using the "epoll" event method
+2025/11/10 08:36:31 [notice] 7#7: nginx/1.25.4
+2025/11/10 08:36:31 [notice] 7#7: built by gcc 12.2.0 (Debian 12.2.0-14) 
+2025/11/10 08:36:31 [notice] 7#7: OS: Linux 6.11.11-linuxkit
+2025/11/10 08:36:31 [notice] 7#7: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2025/11/10 08:36:31 [notice] 7#7: start worker processes
+2025/11/10 08:36:31 [notice] 7#7: start worker process 9
+2025/11/10 08:36:31 [notice] 7#7: start worker process 10
+2025/11/10 08:36:31 [notice] 7#7: start worker process 11
+2025/11/10 08:36:31 [notice] 7#7: start worker process 12
+2025/11/10 08:36:31 [notice] 7#7: start worker process 13
+2025/11/10 08:36:31 [notice] 7#7: start worker process 14
+2025/11/10 08:36:31 [notice] 7#7: start worker process 15
+2025/11/10 08:36:31 [notice] 7#7: start worker process 16
+2025/11/10 08:36:31 [notice] 7#7: start worker process 17
+2025/11/10 08:36:31 [notice] 7#7: start worker process 18
+2025/11/10 08:36:31 [notice] 7#7: start worker process 19
+2025/11/10 08:36:31 [notice] 7#7: start worker process 20
+2025/11/10 08:36:31 [notice] 7#7: start worker process 21
+2025/11/10 08:36:31 [notice] 7#7: start worker process 22
+2025/11/10 08:36:31 [notice] 7#7: start worker process 23
+2025/11/10 08:36:31 [notice] 7#7: start worker process 24
+2025/11/10 08:36:31 [notice] 7#7: start worker process 25
+2025/11/10 08:36:31 [notice] 7#7: start worker process 26
+2025/11/10 08:36:31 [notice] 7#7: start worker process 27
+2025/11/10 08:36:31 [notice] 7#7: start worker process 28
+2025/11/10 08:36:31 [notice] 7#7: start worker process 29
+2025/11/10 08:36:31 [notice] 7#7: start worker process 30
+2025/11/10 08:36:31 [notice] 7#7: start worker process 31
+2025/11/10 08:36:31 [notice] 7#7: start worker process 32
+2025/11/10 08:36:31 [notice] 7#7: start worker process 33
+2025/11/10 08:36:31 [notice] 7#7: start worker process 34
+2025/11/10 08:36:31 [notice] 7#7: start worker process 35
+2025/11/10 08:36:31 [notice] 7#7: start worker process 36

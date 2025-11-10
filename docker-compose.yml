@@ -11,6 +11,7 @@ services:
       - ${NGINX_CONFIG_PATH}/rhymix.conf:/etc/nginx/sites-available/default
       - ${SSL_CERTS_PATH}:/etc/ssl/certs
       - ${LOGS_PATH}:/var/log/nginx
+      - ./rhymix/php/rhymix.ini:/usr/local/etc/php/conf.d/rhymix.ini
     environment:
       - NGINX_HOST=${SSL_DOMAIN}
       - NGINX_PORT=80
