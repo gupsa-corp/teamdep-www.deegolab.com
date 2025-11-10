@@ -1,6 +1,15 @@
 #!/bin/bash
 
-echo "Starting Rhymix with Docker Compose..."
+echo "🚀 Starting Rhymix Development Environment..."
+echo ""
+
+# Check environment variables first
+echo "🔍 Validating environment configuration..."
+./check-env.sh
+if [ $? -ne 0 ]; then
+    echo "❌ Environment validation failed!"
+    exit 1
+fi
 echo ""
 
 # Check if SSL certificates exist
@@ -20,18 +29,29 @@ sudo chmod -R 777 ./rhymix/www/files
 echo "Starting Docker Compose services..."
 docker compose up -d
 
+# Load environment variables
+source .env
+
 echo ""
-echo "Services started successfully!"
+echo "✅ Services started successfully!"
 echo ""
-echo "Access your Rhymix site at:"
-echo "  - HTTP:  http://localhost:4001"
-echo "  - HTTPS: https://localhost (with self-signed certificate)"
+echo "🌐 Access your Rhymix site at:"
+echo "  - HTTP:  http://localhost:${RHYMIX_HTTP_PORT}"
+echo "  - HTTPS: https://localhost:${RHYMIX_HTTPS_PORT} (with self-signed certificate)"
 echo ""
-echo "File locations:"
-echo "  - Rhymix files: ./rhymix/www/"
-echo "  - NGINX config: ./rhymix/nginx/conf.d/"
-echo "  - SSL certificates: ./rhymix/ssl/"
-echo "  - Logs: ./rhymix/logs/"
+echo "🗄️ Database Information:"
+echo "  - Host: localhost:${DB_PORT_EXTERNAL} (external)"
+echo "  - Database: ${DB_DATABASE}"
+echo "  - User: ${DB_USER}"
+echo "  - Password: ${DB_PASSWORD}"
 echo ""
-echo "To stop services: docker compose down"
-echo "To view logs: docker compose logs -f"
+echo "📁 File locations:"
+echo "  - Rhymix files: ${RHYMIX_SRC_PATH}"
+echo "  - NGINX config: ${NGINX_CONFIG_PATH}"
+echo "  - SSL certificates: ${SSL_CERTS_PATH}"
+echo "  - Logs: ${LOGS_PATH}"
+echo ""
+echo "🛠️ Management commands:"
+echo "  - Stop services: docker compose down"
+echo "  - View logs: docker compose logs -f"
+echo "  - Database access: docker exec -it ${DB_CONTAINER_NAME} mysql -u ${DB_USER} -p"

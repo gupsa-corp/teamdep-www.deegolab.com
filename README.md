@@ -4,20 +4,36 @@
 
 ## 🚀 빠른 시작
 
+### **⚠️ 필수 사전 작업**
+환경변수 설정이 **필수**입니다:
 ```bash
-# 프로젝트 시작
+# .env 파일 생성 (필수!)
+cp .env.example .env
+
+# 환경변수 확인
+./check-env.sh
+```
+
+### **시작 명령어**
+```bash
+# 프로젝트 시작 (환경변수 자동 검증 포함)
 ./start-rhymix.sh
 
 # 또는 수동으로
-./setup-ssl.sh
-docker-compose up -d
+./check-env.sh && docker compose up -d
 ```
+
+> **🚨 주의**: .env 파일이 없으면 Docker Compose 실행이 실패합니다!
 
 ## 📁 디렉토리 구조
 
 ```
-├── docker-compose.yml      # Docker Compose 설정
-├── start-rhymix.sh        # 시작 스크립트
+├── .env.example           # 환경변수 템플릿 (커밋됨)
+├── .env                   # 환경변수 설정 (git에서 제외)
+├── .gitignore             # Git 제외 파일 목록
+├── docker-compose.yml     # Docker Compose 설정 (.env 의존)
+├── check-env.sh           # 환경변수 검증 스크립트
+├── start-rhymix.sh        # 시작 스크립트 (검증 포함)
 ├── setup-ssl.sh           # SSL 설정 스크립트
 └── rhymix/
     ├── www/               # Rhymix 소스 코드 (수정 가능)
@@ -63,6 +79,46 @@ docker-compose restart nginx-proxy
    - `./rhymix/ssl/` 폴더에 인증서 파일 배치
    - `your-domain.crt`, `your-domain.key`
 
+## 🗄️ 데이터베이스 정보
+
+### **환경설정**
+환경변수는 `.env` 파일에서 관리됩니다. 처음 설정 시 `.env.example`을 복사하세요:
+```bash
+cp .env.example .env
+```
+
+### **기본 데이터베이스 접속 정보**
+
+#### **Rhymix 설치 시 입력값**:
+- **데이터베이스 유형**: MariaDB/MySQL
+- **호스트**: `rhymix_db` (또는 환경변수 `DB_HOST`)
+- **포트**: `3306`
+- **데이터베이스명**: `rhymix`
+- **사용자명**: `rhymix`
+- **비밀번호**: `rhymix123`
+
+#### **관리자 계정**:
+- **사용자명**: `root`
+- **비밀번호**: `rootpass123`
+
+### **데이터베이스 접속 방법**
+
+#### 터미널에서 직접 접속:
+```bash
+# 일반 사용자 계정
+docker exec -it rhymix_db mysql -u rhymix -p
+# 비밀번호: rhymix123
+
+# 관리자 계정
+docker exec -it rhymix_db mysql -u root -p
+# 비밀번호: rootpass123
+```
+
+#### 외부 도구 (phpMyAdmin, MySQL Workbench):
+- **호스트**: `localhost`
+- **포트**: `3306`
+- **사용자명/비밀번호**: 위와 동일
+
 ## 📋 주요 명령어
 
 ```bash
@@ -77,6 +133,7 @@ docker-compose logs -f
 
 # 특정 서비스 로그
 docker-compose logs -f rhymix
+docker-compose logs -f db
 
 # 서비스 재시작
 docker-compose restart
@@ -85,6 +142,12 @@ docker-compose restart
 sudo chown -R www-data:www-data ./rhymix/www
 sudo chmod -R 755 ./rhymix/www
 sudo chmod -R 777 ./rhymix/www/files
+
+# 데이터베이스 백업
+docker exec rhymix_db mysqldump -u root -p rhymix > backup.sql
+
+# 데이터베이스 복원
+docker exec -i rhymix_db mysql -u root -p rhymix < backup.sql
 ```
 
 ## 🔍 트러블슈팅
@@ -108,9 +171,10 @@ rm -f ./rhymix/ssl/localhost.*
 
 ## 🏗️ 서비스 구성
 
-- **rhymix**: Rhymix CMS 메인 컨테이너
-- **nginx-proxy**: NGINX 리버스 프록시
-- **nginx-proxy-acme**: Let's Encrypt SSL 자동 갱신
+- **rhymix**: Rhymix CMS 메인 컨테이너 (포트: 4001, 4443)
+- **db**: MariaDB 10.11 데이터베이스 서버 (포트: 3306)
+- **볼륨**: `db_data` - 데이터베이스 영구 저장소
+- **네트워크**: `rhymix-network` - 컨테이너 간 통신
 
 ## 📦 포함된 기능
 

@@ -1,0 +1,39 @@
+# Environment variables
+.env
+
+# Docker volumes
+rhymix/www/html/files/cache/
+rhymix/www/html/config/
+
+# Logs
+rhymix/logs/*
+!rhymix/logs/.gitkeep
+
+# SSL certificates (for security)
+rhymix/ssl/*.key
+rhymix/ssl/*.pem
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Backup files
+*.bak
+*.backup
+backup.sql
+
+# Temporary files
+*.tmp
+*.temp
