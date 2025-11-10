@@ -1,0 +1,35 @@
+version: '3.8'
+
+services:
+  rhymix:
+    image: jiro0083/rhymix
+    container_name: rhymix
+    ports:
+      - "3000:80"
+    environment:
+      - RHYMIX_VER=2.1.11
+      - DB_HOST=db
+      - DB_USER=rhymix
+      - DB_PASSWORD=rhymix123
+      - DB_NAME=rhymix
+    volumes:
+      - ./data/rhymix:/usr/share/rhymix
+    depends_on:
+      - db
+    restart: unless-stopped
+
+  db:
+    image: mariadb:10.11
+    container_name: rhymix_db
+    environment:
+      - MYSQL_ROOT_PASSWORD=rootpass123
+      - MYSQL_DATABASE=rhymix
+      - MYSQL_USER=rhymix
+      - MYSQL_PASSWORD=rhymix123
+    volumes:
+      - db_data:/var/lib/mysql
+    restart: unless-stopped
+
+volumes:
+  db_data:
+
