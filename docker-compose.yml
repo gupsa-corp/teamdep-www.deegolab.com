@@ -1,36 +1,16 @@
-version: '3.8'
-
 services:
   rhymix:
-    image: jiro0083/rhymix
-    container_name: rhymix
+    image: navystack/rhymix
+    container_name: rhymix-dev
+    restart: unless-stopped
     ports:
-      - "3000:80"
-    environment:
-      - RHYMIX_VER=2.1.11
-      - DB_HOST=db
-      - DB_USER=rhymix
-      - DB_PASSWORD=rhymix123
-      - DB_NAME=rhymix
+      - "4001:80"
+      - "4443:443"
     volumes:
-      - ./data/rhymix:/usr/share/rhymix
-      - ./Caddyfile:/etc/caddy/Caddyfile
-    depends_on:
-      - db
-    restart: unless-stopped
-
-  db:
-    image: mariadb:10.11
-    container_name: rhymix_db
+      - ./rhymix/www/html:/var/www/html
+      - ./rhymix/nginx/conf.d/rhymix.conf:/etc/nginx/sites-available/default
+      - ./rhymix/ssl:/etc/ssl/certs
+      - ./rhymix/logs:/var/log/nginx
     environment:
-      - MYSQL_ROOT_PASSWORD=rootpass123
-      - MYSQL_DATABASE=rhymix
-      - MYSQL_USER=rhymix
-      - MYSQL_PASSWORD=rhymix123
-    volumes:
-      - db_data:/var/lib/mysql
-    restart: unless-stopped
-
-volumes:
-  db_data:
-
+      - NGINX_HOST=localhost
+      - NGINX_PORT=80
